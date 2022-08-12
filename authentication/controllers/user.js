@@ -1,5 +1,5 @@
 //Creating Signup Controller
-const User = require("../models/user");
+const {User} = require("../models/user");
 const {validationResult} = require('express-validator');
 const user = require("../models/user")
 var jwt = require('jsonwebtoken')

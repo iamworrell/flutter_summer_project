@@ -1,10 +1,9 @@
 const express = require("express");
 const { signup } = require("../controllers/user");
-const { testFunction } = require("../controllers/test");
 const { signin, signout } = require("../controllers/user");
-const {check} = require('express-validator')
+const {check} = require('express-validator');
 const router = express.Router();
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
 router.post('/signup', [
     check("name", "Name should be atleast 3 characters long").isLength({min: 3}),
@@ -12,15 +11,9 @@ router.post('/signup', [
     check("password", "Password should be at least 6 characers long").isLength({min: 6})
 ],signup)
 
-router.post('/signin',signin)
+router.post('/signin', signin)
 
-router.get("/signout",  signout)
-
-router.get("/signout2", signout)
-
-router.post('/test', testFunction);
-
-router.post('/test2', authenticateToken,testFunction);
+router.get("/signout", authenticateToken, signout)
 
 function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization']

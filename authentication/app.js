@@ -20,9 +20,11 @@ app.use(cors());
 
 // Import Routes
 const userRoutes = require("./routes/user")
+const savingsRoutes = require("./routes/savings")
 
 // Using Routes
 app.use('/api', userRoutes) //Main Route
+app.use('/api', savingsRoutes) //Savings Route
 
 
 
