@@ -1,0 +1,42 @@
+BUDGET APP FEATURES
+
+1. User Inputs Savings.
+mongoose.Schema:savingsSchema
+Input Fields: 
+savings
+userId
+
+2. User Inputs Monthly Income.
+mongoose.Schema: incomeSchema
+Input Fields:
+monthlyIncome
+userId
+
+3. Different Categories of Spending.
+
+
+4. Graph that maps daily spending.
+mongoose.Schema: singleItemSchema
+Input Fields:
+cost
+userId
+ 
+
+5. At the end of each week the graph compares the money spent in the different categories to the previous week.
+
+
+6. App determines how much money you will save at the end of the month.
+
+7. User is able to set a spending limit.
+mongoose.Schema: spendingLimitSchema
+Input Fields:
+limit
+userId
+
+8. App reminds user about their spending limit.
+
+
+9. App stores data of each week of a month in a pie chart.
+
+
+10. App Compares saving over 4 weeks using a line chart.
